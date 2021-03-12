@@ -7,3 +7,4 @@
 
 ## Tipos de dados Typescript
 - o arquivo `tipos/tipos.ts` contem exemplos de tipagem de dados.
+- tipos de dados: string, number, boolean, enum, tuplas, object, any
