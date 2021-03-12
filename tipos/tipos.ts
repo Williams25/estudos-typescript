@@ -30,3 +30,14 @@ enum Cor {
 
 let minhaCor: Cor = Cor.cinza
 console.log(minhaCor)
+
+const retornaNome = (nome: string): string => {
+  return nome
+}
+
+console.log(retornaNome(nome))
+
+const multiplica = (n1: number = 0, n2: number = 0): number => {
+  return n1 * n2
+}
+console.log(multiplica(9, 3))
