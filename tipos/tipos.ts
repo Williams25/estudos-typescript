@@ -11,9 +11,9 @@ console.log(possueHobbies)
 let frutas: Array<any> = ["laranja", "melancia", "pitaia"]
 console.log(frutas)
 
-let pessoa: object = {
+let pessoa: { name: string, age: number } = {
   name: "william",
-  idade: 21
+  age: 21
 }
 console.log(pessoa)
 
@@ -35,7 +35,7 @@ const retornaNome = (nome: string): string => {
   return nome
 }
 
-console.log(retornaNome(nome))
+console.log(retornaNome(pessoa.name))
 
 const multiplica = (n1: number = 0, n2: number = 0): number => {
   return n1 * n2
