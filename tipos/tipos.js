@@ -10,7 +10,7 @@ let frutas = ["laranja", "melancia", "pitaia"];
 console.log(frutas);
 let pessoa = {
     name: "william",
-    idade: 21
+    age: 21
 };
 console.log(pessoa);
 // tuplas
@@ -28,8 +28,45 @@ console.log(minhaCor);
 const retornaNome = (nome) => {
     return nome;
 };
-console.log(retornaNome(nome));
+console.log(retornaNome(pessoa.name));
 const multiplica = (n1 = 0, n2 = 0) => {
     return n1 * n2;
 };
 console.log(multiplica(9, 3));
+const funcionario = {
+    supervisor: ["william", "taty", "spaike"],
+    baterPonto: (ponto) => {
+        if (ponto <= 8) {
+            return "Ponto normal";
+        }
+        else if (ponto > 8) {
+            return "Fora do horario";
+        }
+        else {
+            return "Ponto invalido";
+        }
+    }
+};
+console.log(funcionario.baterPonto(8), funcionario.supervisor);
+// union types
+let nota = 10;
+console.log("nota", nota);
+nota = "8";
+console.log("nota", nota);
+// never
+const falha = (msg) => {
+    throw new Error(msg);
+};
+const produto = {
+    nome: "Sabão",
+    preco: 4,
+    validarProduto: () => {
+        if (!produto.nome || produto.nome.trim().length == 0) {
+            falha("Precisa ter nome");
+        }
+        else if (produto.preco <= 0) {
+            falha("Precisa ter preço");
+        }
+    }
+};
+produto.validarProduto();
